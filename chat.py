@@ -1,12 +1,9 @@
 class Chat:
-    def __init__(self, tid, cr=False, tr=False, ml=0, ttr=None):        
+    def __init__(self, tid, time_removed, rejoin_time=0):        
         self.thread_id = tid
-        self.chat_restricted = cr
-        self.time_restricted = tr
-        self.msg_limit = ml
-        self.time_to_rejoin = ttr
+        self.time_removed = time_removed
+        self.rejoin_time = rejoin_time
 
 #TODO
-#implement timeouts that allow users to leave for a specified period of time
-#optional "strict mode" which force kicks the user until that time
+#add minutes parameter for timeouts
 #implement message limits that auto kick after a specified amount of messages are sent
